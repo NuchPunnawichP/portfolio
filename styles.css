@@ -181,6 +181,32 @@ h1 { font-size: clamp(46px, 7.2vw, 100px); font-weight: 700; line-height: 1.02; 
 .pitems h4 { font-size: 16px; margin-bottom: 6px; }
 .pitems p { margin: 0; font-size: 14px; color: var(--ink-2); }
 
+/* ---------- Field photo wall ---------- */
+.field { padding: clamp(40px, 6vw, 80px) var(--space) clamp(90px, 11vw, 140px); }
+.gfilters { margin-bottom: 30px; }
+.gfilters .tab span { margin-left: 4px; opacity: .55; font-weight: 500; }
+.gwall { max-width: 1180px; margin: 0 auto; columns: 3 250px; column-gap: 14px; }
+.gtile {
+  position: relative; display: block; width: 100%; margin: 0 0 14px; padding: 0; border: 0;
+  border-radius: 20px; overflow: hidden; background: var(--soft); break-inside: avoid; cursor: zoom-in;
+  box-shadow: 0 10px 30px rgba(20,22,28,.08); transform: translateZ(0);
+}
+.gtile img { width: 100%; height: auto; transition: transform .6s var(--ease); }
+.gtile:hover img { transform: scale(1.05); }
+.gtile[hidden] { display: none; }
+.gcap {
+  position: absolute; left: 10px; right: 10px; bottom: 10px; display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 12px; border-radius: 14px; text-align: left; font-size: 13px; font-weight: 600; line-height: 1.25;
+  background: rgba(255,255,255,.86); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  opacity: 0; translate: 0 8px; transition: opacity .25s, translate .25s var(--ease);
+}
+.gcap b { font: 500 10px "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.gtile:hover .gcap, .gtile:focus-visible .gcap { opacity: 1; translate: 0 0; }
+.gtile:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+.gtile.pop { animation: panelIn .45s var(--ease); }
+.gmore-wrap { text-align: center; margin-top: 26px; }
+.gmore[hidden] { display: none; }
+
 /* ---------- Sticky notes ---------- */
 .notes-section { background: var(--night); padding: clamp(90px, 11vw, 140px) var(--space) clamp(60px, 8vw, 100px); overflow: hidden; }
 .notes { position: relative; max-width: 1180px; height: 600px; margin: 56px auto 0; }
@@ -302,6 +328,10 @@ footer .wordmark { color: var(--ink); font-size: 18px; }
   .pstats div:nth-child(n+3) { border-top: 1px solid var(--line); }
   .pgrid { gap: 8px; }
   .ph { border-radius: 12px; }
+  .gwall { columns: 2; column-gap: 10px; }
+  .gtile { margin-bottom: 10px; border-radius: 14px; }
+  .gcap { opacity: 1; translate: 0 0; font-size: 11px; padding: 7px 9px; left: 6px; right: 6px; bottom: 6px; }
+  .gcap b { display: none; }
   .note { width: 100%; min-height: 0; }
   .note:nth-child(even) { margin-left: 18px; }
   .note:nth-child(odd) { margin-right: 18px; }

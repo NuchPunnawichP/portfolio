@@ -29,3 +29,4 @@ Then open http://localhost:4173.
 - **Small project:** copy one `<article class="glass mini">` block in the "More builds" section.
 - **Featured project:** copy a whole `<section class="chapter">` block, swap its background photo and thumbnails, and add a card for it under "Choose a project".
 - **Photos in the archive:** copy a `<button class="card">` line. `data-set` sets which filter it appears under (space-separated, e.g. `formula cad`); add `card--wide`, `card--tall` or `card--portrait` to change its shape.
+- **Field photo wall:** put the full photo in `images/gallery/` (about 1600px on the long side) and a ~760px copy with the same name in `images/gallery/thumb/`, then copy a `<button class="gtile">` line in the "Out in the field" section. `data-set` is the filter: `fab`, `clean`, `ev` or `talk`.

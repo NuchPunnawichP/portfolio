@@ -75,7 +75,7 @@ document.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click'
 const box = document.querySelector('.lightbox');
 const boxImg = box.querySelector('img');
 const boxCap = box.querySelector('figcaption');
-document.querySelectorAll('.ph').forEach(el => el.addEventListener('click', () => {
+document.querySelectorAll('.ph, .gtile').forEach(el => el.addEventListener('click', () => {
   boxImg.src = el.dataset.full;
   boxImg.alt = el.querySelector('img').alt;
   boxCap.textContent = el.dataset.caption || '';
@@ -115,3 +115,22 @@ if ('IntersectionObserver' in window && !reduce) {
 } else {
   document.querySelectorAll('.rv, .notes').forEach(el => el.classList.add('in'));
 }
+
+// ---------- Field photo wall: filters + show more ----------
+const gTiles = [...document.querySelectorAll('.gtile')];
+const gFilters = document.querySelectorAll('.gfilters .tab');
+const gMore = document.querySelector('.gmore');
+let gExpanded = false;
+function applyFilter(name) {
+  gFilters.forEach(f => f.classList.toggle('active', f.dataset.filter === name));
+  gTiles.forEach(t => {
+    const match = name === 'all' || t.dataset.set === name;
+    const collapsed = name === 'all' && !gExpanded && t.classList.contains('gmore-item');
+    t.hidden = !match || collapsed;
+    if (!t.hidden) { t.classList.remove('pop'); void t.offsetWidth; t.classList.add('pop'); }
+  });
+  gMore.hidden = name !== 'all' || gExpanded;
+}
+gFilters.forEach(f => f.addEventListener('click', () => applyFilter(f.dataset.filter)));
+gMore.addEventListener('click', () => { gExpanded = true; applyFilter('all'); });
+applyFilter('all');
