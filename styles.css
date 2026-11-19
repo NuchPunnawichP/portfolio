@@ -157,7 +157,7 @@ h1 { font-size: clamp(46px, 7.2vw, 100px); font-weight: 700; line-height: 1.02; 
 .pcard-banner--type span:nth-child(2) { color: #fff; -webkit-text-stroke: 0; }
 .pcard-body { padding: 0 clamp(20px, 3.4vw, 40px) clamp(20px, 3.4vw, 40px); }
 .pcard-head { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
-.pcard-head .avatar { margin-top: -38px; }
+.pcard-head .avatar { position: relative; z-index: 2; margin-top: -38px; }
 .pcard-head > div { padding-top: 16px; }
 .avatar {
   flex: none; display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%;
