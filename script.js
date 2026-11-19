@@ -116,21 +116,23 @@ if ('IntersectionObserver' in window && !reduce) {
   document.querySelectorAll('.rv, .notes').forEach(el => el.classList.add('in'));
 }
 
-// ---------- Field photo wall: filters + show more ----------
-const gTiles = [...document.querySelectorAll('.gtile')];
+// ---------- Field photo wall: grouped by category ----------
+const gGroups = [...document.querySelectorAll('.ggroup')];
 const gFilters = document.querySelectorAll('.gfilters .tab');
-const gMore = document.querySelector('.gmore');
-let gExpanded = false;
 function applyFilter(name) {
   gFilters.forEach(f => f.classList.toggle('active', f.dataset.filter === name));
-  gTiles.forEach(t => {
-    const match = name === 'all' || t.dataset.set === name;
-    const collapsed = name === 'all' && !gExpanded && t.classList.contains('gmore-item');
-    t.hidden = !match || collapsed;
-    if (!t.hidden) { t.classList.remove('pop'); void t.offsetWidth; t.classList.add('pop'); }
+  gGroups.forEach(g => {
+    const all = name === 'all';
+    g.hidden = !all && g.dataset.group !== name;
+    g.querySelectorAll('.gextra').forEach(t => { t.hidden = all; });
+    const see = g.querySelector('.gsee');
+    if (see) see.hidden = !all;
+    if (!g.hidden) g.querySelectorAll('.gtile:not([hidden])').forEach(t => { t.classList.remove('pop'); void t.offsetWidth; t.classList.add('pop'); });
   });
-  gMore.hidden = name !== 'all' || gExpanded;
 }
 gFilters.forEach(f => f.addEventListener('click', () => applyFilter(f.dataset.filter)));
-gMore.addEventListener('click', () => { gExpanded = true; applyFilter('all'); });
+document.querySelectorAll('.gsee').forEach(b => b.addEventListener('click', () => {
+  applyFilter(b.dataset.filter);
+  document.querySelector('#field').scrollIntoView({ behavior: 'smooth' });
+}));
 applyFilter('all');

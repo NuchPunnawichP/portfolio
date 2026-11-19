@@ -185,7 +185,7 @@ h1 { font-size: clamp(46px, 7.2vw, 100px); font-weight: 700; line-height: 1.02; 
 .field { padding: clamp(40px, 6vw, 80px) var(--space) clamp(90px, 11vw, 140px); }
 .gfilters { margin-bottom: 30px; }
 .gfilters .tab span { margin-left: 4px; opacity: .55; font-weight: 500; }
-.gwall { max-width: 1180px; margin: 0 auto; columns: 3 250px; column-gap: 14px; }
+.gwall { columns: 3 250px; column-gap: 14px; }
 .gtile {
   position: relative; display: block; width: 100%; margin: 0 0 14px; padding: 0; border: 0;
   border-radius: 20px; overflow: hidden; background: var(--soft); break-inside: avoid; cursor: zoom-in;
@@ -204,8 +204,15 @@ h1 { font-size: clamp(46px, 7.2vw, 100px); font-weight: 700; line-height: 1.02; 
 .gtile:hover .gcap, .gtile:focus-visible .gcap { opacity: 1; translate: 0 0; }
 .gtile:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
 .gtile.pop { animation: panelIn .45s var(--ease); }
-.gmore-wrap { text-align: center; margin-top: 26px; }
-.gmore[hidden] { display: none; }
+.ggroup { max-width: 1180px; margin: 0 auto 56px; }
+.ggroup[hidden] { display: none; }
+.ghead { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.ghead h3 { font-size: clamp(24px, 2.8vw, 32px); font-weight: 700; }
+.ghead h3 span { display: inline-grid; place-items: center; min-width: 30px; height: 30px; padding: 0 8px; margin-left: 6px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 14px; vertical-align: 5px; }
+.ghead p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.gsee { flex: none; padding: 10px 16px; border-radius: 999px; border: 1.5px solid #d5d8e0; background: #fff; font-size: 13px; font-weight: 600; transition: border-color .2s, transform .2s; }
+.gsee:hover { border-color: var(--ink); transform: translateY(-1px); }
+.gsee[hidden] { display: none; }
 
 /* ---------- Sticky notes ---------- */
 .notes-section { background: var(--night); padding: clamp(90px, 11vw, 140px) var(--space) clamp(60px, 8vw, 100px); overflow: hidden; }
@@ -329,6 +336,8 @@ footer .wordmark { color: var(--ink); font-size: 18px; }
   .pgrid { gap: 8px; }
   .ph { border-radius: 12px; }
   .gwall { columns: 2; column-gap: 10px; }
+  .ghead { flex-direction: column; align-items: flex-start; }
+  .ggroup { margin-bottom: 40px; }
   .gtile { margin-bottom: 10px; border-radius: 14px; }
   .gcap { opacity: 1; translate: 0 0; font-size: 11px; padding: 7px 9px; left: 6px; right: 6px; bottom: 6px; }
   .gcap b { display: none; }
