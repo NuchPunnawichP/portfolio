@@ -6,276 +6,281 @@
   <title>Nuch — Engineering Portfolio</title>
   <meta name="description" content="Punnawich Pongsriassawin — mechanical engineering at Chulalongkorn University. Formula car chassis, rocket structures, mechatronics and robotics.">
   <meta property="og:title" content="Nuch — Engineering Portfolio">
-  <meta property="og:description" content="Mechanical engineering · mechatronics · robotics — Bangkok, Thailand">
+  <meta property="og:description" content="I build things that move. Mechanical engineering · mechatronics · robotics — Bangkok.">
   <meta property="og:image" content="https://nuch-portfolio.vercel.app/images/formula-track.jpg">
   <meta property="og:url" content="https://nuch-portfolio.vercel.app/">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d1d1f'/%3E%3Ccircle cx='23' cy='10' r='3' fill='%23ff5d78'/%3E%3Ctext x='14' y='23' font-family='Arial' font-weight='700' font-size='16' fill='white' text-anchor='middle'%3En%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2314161c'/%3E%3Ccircle cx='23' cy='10' r='3.4' fill='%23ff5d78'/%3E%3Ctext x='14' y='23' font-family='Arial' font-weight='700' font-size='16' fill='white' text-anchor='middle'%3En%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <p class="ticker"><span class="pulse"></span> Mechanical engineering · mechatronics · robotics — Bangkok, Thailand</p>
-    <div class="nav glass">
+  <!-- ============ FLOATING NAV ============ -->
+  <header class="nav-wrap">
+    <div class="nav">
       <a class="wordmark" href="#top" aria-label="Back to top">nuch<span>°</span></a>
       <nav aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#archive">Archive</a>
+        <a href="#work">Work</a>
+        <a href="#builds">Builds</a>
         <a href="#about">About</a>
       </nav>
-      <a class="nav-contact" href="#contact">Contact <span>↗</span></a>
+      <a class="btn btn--dark btn--sm" href="#contact">Let's talk</a>
     </div>
   </header>
 
   <main id="top">
     <!-- ============ HERO ============ -->
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="images/formula-track.jpg" alt="Formula car cornering between cones at TSAE 2024" fetchpriority="high">
-      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-cards" aria-hidden="true">
+        <figure class="hcard" style="--x:4%;  --y:12%; --r:-7deg; --d:0s;   --p:.10"><img src="images/formula-track.jpg" alt=""><figcaption><i style="--c:#ff5d78"></i><b>Formula chassis</b><span>TSAE 2024 · 2nd place</span></figcaption></figure>
+        <figure class="hcard" style="--x:6%;  --y:58%; --r:5deg;  --d:-2s;  --p:.18"><img src="images/rocket-launch.jpg" alt=""><figcaption><i style="--c:#4f7cff"></i><b>CURS III launch</b><span>Spaceport America Cup</span></figcaption></figure>
+        <figure class="hcard hcard--sm" style="--x:22%; --y:78%; --r:-4deg; --d:-4s; --p:.24"><img src="images/formula-chassis.jpg" alt=""><figcaption><i style="--c:#ffb800"></i><b>Frame jig</b><span>Laser-cut steel</span></figcaption></figure>
+        <figure class="hcard" style="--x:76%; --y:8%;  --r:6deg;  --d:-1s;  --p:.14"><img src="images/rocket-rail.jpg" alt=""><figcaption><i style="--c:#4f7cff"></i><b>On the rail</b><span>CU High Altitude Research</span></figcaption></figure>
+        <figure class="hcard hcard--sm" style="--x:84%; --y:48%; --r:-6deg; --d:-3s; --p:.2"><img src="images/rocket-avionics.jpg" alt=""><figcaption><i style="--c:#22c55e"></i><b>Interior wiring</b><span>Payload bay</span></figcaption></figure>
+        <figure class="hcard" style="--x:70%; --y:70%; --r:4deg;  --d:-5s;  --p:.12"><img src="images/formula-cad.jpg" alt=""><figcaption><i style="--c:#a259ff"></i><b>Chassis CAD</b><span>SolidWorks</span></figcaption></figure>
+      </div>
+
       <div class="hero-copy">
-        <p class="eyebrow eyebrow--light">Punnawich Pongsriassawin · Chulalongkorn University</p>
-        <h1 id="hero-title">Engineering things<br>that <em>move.</em></h1>
-        <p>Race car frames, rocket interiors and the robots in between. I design the structure, build the hardware and write the code that runs it.</p>
+        <p class="hero-kicker"><span class="dot"></span> Mechanical engineering · Chulalongkorn University</p>
+        <h1 id="hero-title">I build things<br>that <span class="swap" aria-live="polite"><span class="swap-word grad">move</span></span></h1>
+        <p class="hero-sub">Race car frames, rocket interiors, robots and the code that runs them. I'm Nuch — Punnawich Pongsriassawin.</p>
         <div class="hero-actions">
-          <a class="button button--light" href="#projects">See the projects</a>
-          <a class="button button--glass glass" href="#archive">Photo archive <span>↓</span></a>
+          <a class="btn btn--dark" href="#work">See my work</a>
+          <a class="btn btn--line" href="#builds">Browse all builds</a>
         </div>
       </div>
-      <dl class="hero-stats glass">
-        <div><dt>2nd</dt><dd>TSAE 2024<br>formula student</dd></div>
-        <div><dt>30k ft</dt><dd>Spaceport America<br>Cup rocket</dd></div>
-        <div><dt>9+</dt><dd>Builds from<br>2019 – now</dd></div>
-      </dl>
+      <a class="scroll-hint" href="#work">Scroll down <span>⌄</span></a>
     </section>
 
-    <!-- ============ PROJECT PICKER ============ -->
-    <section class="themes" id="projects" aria-labelledby="themes-title">
-      <div class="themes-heading">
-        <p class="eyebrow">Selected work</p>
-        <h2 id="themes-title">Choose a <em>project.</em></h2>
-        <a href="#archive">See every photo <span>↘</span></a>
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-label="Tools I use">
+      <div class="marquee-track">
+        <span>Fusion 360</span><span>✦</span><span>SolidWorks</span><span>✦</span><span>Ansys</span><span>✦</span><span>MATLAB</span><span>✦</span><span>Arduino</span><span>✦</span><span>STM32</span><span>✦</span><span>Raspberry Pi</span><span>✦</span><span>Python</span><span>✦</span><span>3D printing</span><span>✦</span><span>Laser cutting</span><span>✦</span><span>Blender</span><span>✦</span>
+        <span aria-hidden="true">Fusion 360</span><span aria-hidden="true">✦</span><span aria-hidden="true">SolidWorks</span><span aria-hidden="true">✦</span><span aria-hidden="true">Ansys</span><span aria-hidden="true">✦</span><span aria-hidden="true">MATLAB</span><span aria-hidden="true">✦</span><span aria-hidden="true">Arduino</span><span aria-hidden="true">✦</span><span aria-hidden="true">STM32</span><span aria-hidden="true">✦</span><span aria-hidden="true">Raspberry Pi</span><span aria-hidden="true">✦</span><span aria-hidden="true">Python</span><span aria-hidden="true">✦</span><span aria-hidden="true">3D printing</span><span aria-hidden="true">✦</span><span aria-hidden="true">Laser cutting</span><span aria-hidden="true">✦</span><span aria-hidden="true">Blender</span><span aria-hidden="true">✦</span>
       </div>
-      <div class="theme-grid">
-        <a class="theme-card" href="#formula">
-          <img src="images/formula-chassis.jpg" alt="Laser-cut chassis jig on a welding table" loading="lazy">
-          <span class="theme-label glass">Formula car chassis <b>2023 – 24</b></span>
-        </a>
-        <a class="theme-card" href="#rocket">
-          <img src="images/rocket-launch.jpg" alt="Rocket CURS III lifting off over desert hills" loading="lazy">
-          <span class="theme-label glass">Rocket CURS III <b>2023 – 24</b></span>
-        </a>
-        <a class="theme-card" href="#more">
-          <img src="images/rocket-avionics.jpg" alt="Wiring and 3D-printed mounts inside a rocket bay" loading="lazy">
-          <span class="theme-label glass">More builds <b>7 projects</b></span>
-        </a>
-      </div>
-    </section>
+    </div>
 
-    <!-- ============ CHAPTER 01 — FORMULA ============ -->
-    <section class="chapter" id="formula" aria-labelledby="formula-title">
-      <img class="chapter-bg" src="images/formula-track.jpg" alt="" loading="lazy">
-      <div class="chapter-shade" aria-hidden="true"></div>
-      <div class="chapter-panel glass">
-        <p class="eyebrow eyebrow--light">Chapter 01 · CU Rapidamente Club · Aug 2023 – Feb 2024</p>
-        <h2 id="formula-title">Formula car <em>chassis.</em></h2>
-        <p class="chapter-lede">A frame that carries every component of a university race car — designed in CAD, cut on a laser, welded on a jig.</p>
-        <div class="wwr">
-          <div><h3>What</h3><p>Chassis structure and air-intake routing for engine performance.</p></div>
-          <div><h3>How</h3><p>Laser-cut steel adapters join the frame; base fixtures hold every member in place while it's welded.</p></div>
-          <div class="wwr-result"><h3>Result</h3><p><strong>2nd place</strong> at TSAE 2024.</p></div>
-        </div>
-        <div class="thumbs">
-          <button class="thumb" data-full="images/formula-cad.jpg" data-caption="Formula — chassis CAD in SolidWorks"><img src="images/formula-cad.jpg" alt="Chassis CAD model" loading="lazy"></button>
-          <button class="thumb" data-full="images/formula-chassis.jpg" data-caption="Formula — the frame jig"><img src="images/formula-chassis.jpg" alt="Frame jig" loading="lazy"></button>
-          <button class="thumb" data-full="images/formula-track.jpg" data-caption="Formula — on track at TSAE 2024"><img src="images/formula-track.jpg" alt="Car on track" loading="lazy"></button>
-        </div>
-      </div>
-    </section>
+    <!-- ============ WORK (tab switcher) ============ -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <h2 id="work-title" class="center-title">One engineer,<br><span class="grad">many</span> machines.</h2>
+      <p class="center-sub">Pick a field. Every card is something I designed, built or taught.</p>
 
-    <!-- ============ CHAPTER 02 — ROCKET ============ -->
-    <section class="chapter chapter--right" id="rocket" aria-labelledby="rocket-title">
-      <img class="chapter-bg" src="images/rocket-rail.jpg" alt="" loading="lazy">
-      <div class="chapter-shade" aria-hidden="true"></div>
-      <div class="chapter-panel glass">
-        <p class="eyebrow eyebrow--light">Chapter 02 · CU High Altitude Research · Sep 2023 – Jun 2024</p>
-        <h2 id="rocket-title">Rocket <em>CURS III.</em></h2>
-        <p class="chapter-lede">The payload bay and thrust structures of a 30,000 ft rocket built for the Spaceport America Cup.</p>
-        <div class="wwr">
-          <div><h3>What</h3><p>Interior structure that carries the payload and keeps the electronics organised.</p></div>
-          <div><h3>How</h3><p>Simulated deformation under load to size the structure, then planned the wiring routes and assembled it.</p></div>
-          <div class="wwr-result"><h3>Result</h3><p><strong>Launched</strong> — every interior part worked and held.</p></div>
-        </div>
-        <div class="thumbs">
-          <button class="thumb" data-full="images/rocket-cad.jpg" data-caption="Rocket — interior CAD in Fusion 360"><img src="images/rocket-cad.jpg" alt="Rocket CAD" loading="lazy"></button>
-          <button class="thumb" data-full="images/rocket-avionics.jpg" data-caption="Rocket — interior assembly and wiring"><img src="images/rocket-avionics.jpg" alt="Interior wiring" loading="lazy"></button>
-          <button class="thumb" data-full="images/rocket-launch.jpg" data-caption="Rocket — launch"><img src="images/rocket-launch.jpg" alt="Launch" loading="lazy"></button>
-        </div>
+      <div class="tabs" role="tablist" aria-label="Project fields">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="formula">Formula car</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="rocket">Rocketry</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="mech">Mechatronics</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="teach">Teaching</button>
       </div>
-    </section>
 
-    <!-- ============ MORE BUILDS ============ -->
-    <section class="more" id="more" aria-labelledby="more-title">
-      <img class="more-bg" src="images/rocket-avionics.jpg" alt="" aria-hidden="true" loading="lazy">
-      <div class="more-inner">
-        <div class="section-head section-head--light">
-          <div>
-            <p class="eyebrow eyebrow--light">Also built</p>
-            <h2 id="more-title">More <em>builds.</em></h2>
+      <!-- Formula -->
+      <article class="pcard" data-panel="formula">
+        <div class="pcard-banner"><img src="images/formula-track.jpg" alt="Formula car on track at TSAE 2024"></div>
+        <div class="pcard-body">
+          <div class="pcard-head">
+            <span class="avatar" style="--c:#ff5d78">F</span>
+            <div><h3>Formula Car Chassis</h3><p>CU Rapidamente Club · Structural Engineer · Aug 2023 – Feb 2024</p></div>
           </div>
-          <p>Mechanisms, sensors and experiments — from high school to now.</p>
+          <p class="pcard-desc">Designed a chassis that carries every component of a university race car, and routed the air intake for engine performance. Cut steel adapters on a laser, then assembled the frame on base fixtures so every member sat exactly in place.</p>
+          <div class="pstats">
+            <div><b>2nd</b><span>TSAE 2024</span></div>
+            <div><b>Steel</b><span>Laser-cut adapters</span></div>
+            <div><b>Jig</b><span>Fixture assembly</span></div>
+            <div><b>SolidWorks</b><span>CAD</span></div>
+          </div>
+          <div class="pgrid">
+            <button class="ph" data-full="images/formula-cad.jpg" data-caption="Chassis CAD"><img src="images/formula-cad.jpg" alt="Chassis CAD" loading="lazy"></button>
+            <button class="ph" data-full="images/formula-chassis.jpg" data-caption="Frame jig"><img src="images/formula-chassis.jpg" alt="Frame jig" loading="lazy"></button>
+            <button class="ph" data-full="images/formula-track.jpg" data-caption="On track at TSAE 2024"><img src="images/formula-track.jpg" alt="On track" loading="lazy"></button>
+          </div>
         </div>
-        <div class="more-grid">
-          <article class="glass mini">
-            <p class="mini-meta">2024 – now · Machinery, Chula ME</p>
-            <h3>Two-DOF solar tracker</h3>
-            <p>Four-bar linkage that follows the sun. Fusion 360 + MATLAB, Arduino control with LDR sensing.</p>
-          </article>
-          <article class="glass mini">
-            <p class="mini-meta">2024 – now · Dept. of Physics</p>
-            <h3>Steel ball accelerator</h3>
-            <p>Four switched copper coils push a steel ball around a track — a desktop circular accelerator.</p>
-          </article>
-          <article class="glass mini">
-            <p class="mini-meta">2022 · Startup Thailand League</p>
-            <h3>Coconut volume device</h3>
-            <p>Improved the model that estimates coconut water and flesh volume. Python, OpenCV, NumPy.</p>
-          </article>
-          <article class="glass mini">
-            <p class="mini-meta">2020 – 21 · MWIT</p>
-            <h3>CubeSat lightning payload</h3>
-            <p>PCB and embedded code for a SiPM sensor that records lightning photons.</p>
-            <p class="mini-award">SpaceFIGHT semi-finalist · popular vote</p>
-          </article>
-          <article class="glass mini">
-            <p class="mini-meta">2021 – 22 · MWIT</p>
-            <h3>Polarization interferometer</h3>
-            <p>A quarter-wave plate replaces arm adjustment to shift phase.</p>
-            <p class="mini-award">Honorable Mention · ASMS 2021</p>
-          </article>
-          <article class="glass mini">
-            <p class="mini-meta">2021 – 22 · MWIT × AHIS</p>
-            <h3>CO₂-controlled grow tank</h3>
-            <p>Peltier cooling and an Arduino-servo CO₂ system for a 30-day sweet basil study.</p>
-          </article>
-          <article class="glass mini">
-            <p class="mini-meta">2022 · Classwork, Chula</p>
-            <h3>Bus stop sign study</h3>
-            <p>Blender simulation of rain, sunlight and brightness to test a new sign design.</p>
-          </article>
+      </article>
+
+      <!-- Rocket -->
+      <article class="pcard" data-panel="rocket" hidden>
+        <div class="pcard-banner"><img src="images/rocket-rail.jpg" alt="Rocket CURS III on its launch rail" style="object-position:center 30%"></div>
+        <div class="pcard-body">
+          <div class="pcard-head">
+            <span class="avatar" style="--c:#4f7cff">R</span>
+            <div><h3>Rocket CURS III — Interior</h3><p>CU High Altitude Research Club · Structural Engineer · Sep 2023 – Jun 2024</p></div>
+          </div>
+          <p class="pcard-desc">Designed the payload bay and thrust structures of a 30,000 ft COTS rocket for the Spaceport America Cup. Simulated deformation under load to size the structure, then planned the wiring routes and organised every electronic part inside.</p>
+          <div class="pstats">
+            <div><b>30k ft</b><span>Rocket class</span></div>
+            <div><b>Launched</b><span>Interior intact</span></div>
+            <div><b>FEA</b><span>Load simulation</span></div>
+            <div><b>Fusion 360</b><span>CAD</span></div>
+          </div>
+          <div class="pgrid">
+            <button class="ph" data-full="images/rocket-cad.jpg" data-caption="Interior CAD"><img src="images/rocket-cad.jpg" alt="Rocket CAD" loading="lazy"></button>
+            <button class="ph" data-full="images/rocket-avionics.jpg" data-caption="Interior and wiring"><img src="images/rocket-avionics.jpg" alt="Interior wiring" loading="lazy"></button>
+            <button class="ph" data-full="images/rocket-launch.jpg" data-caption="Launch"><img src="images/rocket-launch.jpg" alt="Launch" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mechatronics -->
+      <article class="pcard" data-panel="mech" hidden>
+        <div class="pcard-banner pcard-banner--type" style="--b1:#14161c; --b2:#7c3aed" aria-hidden="true">
+          <span>MECHATRONICS</span><span>MECHATRONICS</span><span>MECHATRONICS</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-head">
+            <span class="avatar" style="--c:#a259ff">M</span>
+            <div><h3>Mechanisms &amp; Machines</h3><p>Chula ME · Dept. of Physics · IRIS Mechatronics · 2024 – now</p></div>
+          </div>
+          <div class="pitems">
+            <div><h4>Two-DOF solar tracker</h4><p>Four-bar linkage that follows the sun. Simulated in MATLAB and Fusion 360, driven by Arduino with LDR sensing. I lead CAD and control.</p></div>
+            <div><h4>Portable steel ball accelerator</h4><p>Four switched copper coils push a steel ball around a ring — a desktop circular accelerator. Hardware and 3D printing.</p></div>
+            <div><h4>3D design at IRIS Mechatronics</h4><p>Part-time since 2024: CAD, 3D printing, plastic injection and resin production.</p></div>
+          </div>
+          <div class="pstats">
+            <div><b>2-DOF</b><span>Four-bar linkage</span></div>
+            <div><b>4 coils</b><span>Accelerator</span></div>
+            <div><b>Arduino</b><span>Control</span></div>
+            <div><b>MATLAB</b><span>Simulation</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Teaching -->
+      <article class="pcard" data-panel="teach" hidden>
+        <div class="pcard-banner pcard-banner--type" style="--b1:#ff5d78; --b2:#ffb800" aria-hidden="true">
+          <span>TEACHING</span><span>TEACHING</span><span>TEACHING</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-head">
+            <span class="avatar" style="--c:#ffb800">T</span>
+            <div><h3>Workshops &amp; Clubs</h3><p>RoboRacer · ME Camp · ESC × AMSA · MWIT Robotics</p></div>
+          </div>
+          <div class="pitems">
+            <div><h4>Robotics lecturer, RoboRacer Club</h4><p>Maze-solving robots for IEEE Micromouse — wrote the step-by-step build manual.</p></div>
+            <div><h4>Thermo &amp; Arduino lecturer, ME Camp 2024</h4><p>First law, heat engines, microcontrollers and RC control.</p></div>
+            <div><h4>President, MWIT Robotics Club</h4><p>Started a robotics classroom with 25 3D printers; biped robot at the World Robot Games 2019.</p></div>
+          </div>
+          <div class="pstats">
+            <div><b>25</b><span>3D printers set up</span></div>
+            <div><b>IoT</b><span>Telemedicine workshop</span></div>
+            <div><b>Micromouse</b><span>Maze robots</span></div>
+            <div><b>2019</b><span>World Robot Games</span></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ STICKY NOTES ============ -->
+    <section class="notes-section" id="builds" aria-labelledby="builds-title">
+      <h2 id="builds-title" class="center-title center-title--light">Side quests &amp; early builds…</h2>
+      <p class="center-sub center-sub--light">From high-school labs to hackathons. Hover a note.</p>
+      <div class="notes">
+        <article class="note" style="--bg:#bdf3f0; --r:-6deg; --x:2%;  --y:6%"><b>CubeSat lightning payload</b><p>PCB + embedded code for a SiPM sensor that records lightning photons.</p><small>2020–21 · SpaceFIGHT semi-final</small></article>
+        <article class="note" style="--bg:#ffe39a; --r:4deg;  --x:27%; --y:0%"><b>Polarization interferometer</b><p>Quarter-wave plate shifts phase — no arm adjustment.</p><small>2021–22 · ASMS Honorable Mention</small></article>
+        <article class="note" style="--bg:#c8f7c5; --r:-3deg; --x:52%; --y:8%"><b>CO₂ grow tank</b><p>Peltier cooling + Arduino-servo CO₂ control for a 30-day basil study.</p><small>2021–22 · MWIT × AHIS</small></article>
+        <article class="note" style="--bg:#e2d4ff; --r:6deg;  --x:76%; --y:2%"><b>Coconut volume device</b><p>Calibrated the model behind it. Python, OpenCV, NumPy.</p><small>2022 · Startup Thailand League</small></article>
+        <article class="note" style="--bg:#ffc7bd; --r:-5deg; --x:12%; --y:50%"><b>Bus stop sign study</b><p>Blender sims of rain, sun and glare to test a new sign.</p><small>2022 · Chula classwork</small></article>
+        <article class="note" style="--bg:#ffd8a8; --r:3deg;  --x:38%; --y:54%"><b>Hack the Crisis</b><p>3rd place + popular vote at the 2020 hackathon.</p><small>2020 · Thailand</small></article>
+        <article class="note" style="--bg:#d6ecff; --r:-2deg; --x:63%; --y:48%"><b>Camp enrollment site</b><p>Full-stack: UI, back end, registration and grouping.</p><small>2020–21 · Pre-MWIT Camp</small></article>
+      </div>
+    </section>
+
+    <!-- ============ BIG NUMBERS ============ -->
+    <section class="numbers" aria-label="Highlights">
+      <div class="num-row">
+        <div class="num-left">
+          <p class="hand">my team</p>
+          <svg class="arrow" viewBox="0 0 220 90" aria-hidden="true"><path d="M6 14 C 60 92, 140 92, 200 46" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M186 40 L202 45 L192 58" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="big" data-count="2" data-suffix="nd">2nd</span>
+        </div>
+        <div class="num-right">
+          <h3>Formula student,<br><span class="grad">TSAE 2024.</span></h3>
+          <p>The chassis I worked on helped the CU Rapidamente car finish second in Thailand's national formula student competition.</p>
+          <a class="link" href="#work">See the build →</a>
+        </div>
+      </div>
+      <div class="num-row num-row--flip">
+        <div class="num-left">
+          <p class="hand">altitude class</p>
+          <span class="big" data-count="30000" data-suffix=" ft">30,000 ft</span>
+        </div>
+        <div class="num-right">
+          <h3>A rocket built for<br><span class="grad">Spaceport America.</span></h3>
+          <p>CURS III flew with an interior I designed — payload bay, thrust structure and wiring — and everything inside held.</p>
+          <a class="link" href="#work" data-jump="rocket">See the rocket →</a>
         </div>
       </div>
     </section>
 
-    <!-- ============ PHOTO ARCHIVE ============ -->
-    <section class="work" id="archive" aria-labelledby="work-title">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">From the workshop</p>
-          <h2 id="work-title">The archive</h2>
-        </div>
-        <p>Pick a project, then click any frame to look closer.</p>
-      </div>
+    <!-- ============ DARK FEATURE ROWS ============ -->
+    <section class="features" id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="center-title center-title--light">Design it. Build it. <span class="grad">Teach it.</span></h2>
 
-      <div class="filters" role="group" aria-label="Filter photographs">
-        <button class="filter active" type="button" data-filter="all">All <span>7</span></button>
-        <button class="filter" type="button" data-filter="formula">Formula <span>3</span></button>
-        <button class="filter" type="button" data-filter="rocket">Rocket <span>4</span></button>
-        <button class="filter" type="button" data-filter="cad">CAD <span>2</span></button>
-      </div>
-
-      <div class="gallery">
-        <button class="card card--wide" data-set="formula" data-full="images/formula-track.jpg" data-caption="Formula — on track at TSAE 2024"><img src="images/formula-track.jpg" alt="Formula car on track" loading="lazy"><span class="card-meta glass">Formula <b>01</b></span></button>
-        <button class="card card--tall" data-set="rocket" data-full="images/rocket-launch.jpg" data-caption="Rocket — launch"><img src="images/rocket-launch.jpg" alt="Rocket launch" loading="lazy"><span class="card-meta glass">Rocket <b>02</b></span></button>
-        <button class="card" data-set="formula" data-full="images/formula-chassis.jpg" data-caption="Formula — frame jig"><img src="images/formula-chassis.jpg" alt="Chassis jig" loading="lazy"><span class="card-meta glass">Formula <b>03</b></span></button>
-        <button class="card card--portrait" data-set="rocket" data-full="images/rocket-rail.jpg" data-caption="Rocket — on the rail"><img src="images/rocket-rail.jpg" alt="Rocket on launch rail" loading="lazy"><span class="card-meta glass">Rocket <b>04</b></span></button>
-        <button class="card card--portrait" data-set="rocket" data-full="images/rocket-avionics.jpg" data-caption="Rocket — interior and wiring"><img src="images/rocket-avionics.jpg" alt="Rocket interior wiring" loading="lazy"><span class="card-meta glass">Rocket <b>05</b></span></button>
-        <button class="card card--wide" data-set="formula cad" data-full="images/formula-cad.jpg" data-caption="Formula — chassis CAD"><img src="images/formula-cad.jpg" alt="Chassis CAD" loading="lazy"><span class="card-meta glass">Formula · CAD <b>06</b></span></button>
-        <button class="card" data-set="rocket cad" data-full="images/rocket-cad.jpg" data-caption="Rocket — interior CAD"><img src="images/rocket-cad.jpg" alt="Rocket CAD" loading="lazy"><span class="card-meta glass">Rocket · CAD <b>07</b></span></button>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div class="blob blob--a" aria-hidden="true"></div>
-      <div class="blob blob--b" aria-hidden="true"></div>
-      <div class="about-intro">
-        <p class="eyebrow">About</p>
-        <div>
-          <h2 id="about-title">Structures, circuits, <em>code.</em></h2>
-          <p>Junior in Mechanical Engineering at Chulalongkorn University, drawn to cyber-physical systems: mechatronics, embedded systems, IoT, machine learning and robotics. Off the bench I teach Arduino and robotics workshops and shoot photos.</p>
-        </div>
-      </div>
-
-      <div class="about-grid">
-        <div class="glass panel panel--light">
-          <p class="eyebrow">Experience</p>
-          <ol class="path">
-            <li><span>2024 –</span><b>3D Design, IRIS Mechatronics</b></li>
-            <li><span>2024 –</span><b>Robotics Lecturer, RoboRacer Club</b></li>
-            <li><span>2024</span><b>Thermo &amp; Arduino Lecturer, ME Camp</b></li>
-            <li><span>2024</span><b>Arduino Lecturer, ESC × AMSA</b></li>
-            <li><span>2023 – 24</span><b>Structural Engineer, CUHAR</b></li>
-            <li><span>2023 – 24</span><b>Structural Engineer, CU Rapidamente</b></li>
-            <li><span>2022 –</span><b>Engineering Student Committee</b></li>
-            <li><span>2020 – 21</span><b>President, MWIT Robotics Club</b></li>
-          </ol>
-        </div>
-        <div class="glass panel panel--light">
-          <p class="eyebrow">Tools</p>
+      <div class="frow">
+        <p class="ftext"><span class="grad">Design</span> in CAD,<br>prove it in simulation</p>
+        <div class="fcard">
+          <p class="fcard-label">Toolbox</p>
           <ul class="chips">
-            <li>Fusion 360</li><li>SolidWorks</li><li>Ansys</li><li>Blender</li><li>MATLAB</li>
-            <li>3D printing</li><li>Laser cutting</li><li>Mini CNC</li><li>Soldering</li>
+            <li>Fusion 360</li><li>SolidWorks</li><li>Ansys</li><li>Blender</li><li>MATLAB</li><li>Numerical methods</li>
+          </ul>
+          <div class="fcard-mini"><span>Certificates</span><b>MATLAB × 6</b><em>ODEs · linear algebra · curve fitting · multibody</em></div>
+        </div>
+      </div>
+
+      <div class="frow frow--flip">
+        <p class="ftext"><span class="grad">Build</span> with real hardware</p>
+        <div class="fcard">
+          <p class="fcard-label">Workshop</p>
+          <ul class="chips">
+            <li>3D printing</li><li>Laser cutting</li><li>Mini CNC</li><li>Soldering</li><li>Wiring</li><li>Plastic injection</li>
+          </ul>
+          <p class="fcard-label">Embedded &amp; code</p>
+          <ul class="chips">
             <li>C/C++</li><li>Arduino</li><li>STM32</li><li>Raspberry Pi</li><li>Python</li><li>Machine learning</li>
           </ul>
-          <p class="eyebrow eyebrow--gap">Education</p>
+        </div>
+      </div>
+
+      <div class="frow">
+        <p class="ftext"><span class="grad">Lead</span> teams &amp; share it</p>
+        <div class="fcard">
+          <p class="fcard-label">Path</p>
           <ol class="path">
-            <li><span>2022 –</span><b>B.Eng. Mechanical, Chulalongkorn</b></li>
+            <li><span>2024 –</span><b>3D Design · IRIS Mechatronics</b></li>
+            <li><span>2024 –</span><b>Robotics Lecturer · RoboRacer Club</b></li>
+            <li><span>2023 – 24</span><b>Structural Eng. · CUHAR rocketry</b></li>
+            <li><span>2023 – 24</span><b>Structural Eng. · CU Rapidamente</b></li>
+            <li><span>2022 –</span><b>Engineering Student Committee</b></li>
+            <li><span>2022 –</span><b>B.Eng. Mechanical · Chulalongkorn</b></li>
             <li><span>2019 – 22</span><b>Mahidol Wittayanusorn School</b></li>
           </ol>
         </div>
-        <div class="glass panel panel--light">
-          <p class="eyebrow">Recognition</p>
-          <ol class="path">
-            <li><span>2024</span><b>2nd place, TSAE formula student</b></li>
-            <li><span>2024</span><b>MATLAB certificates ×6</b></li>
-            <li><span>2021</span><b>Honorable Mention, ASMS Science Fair</b></li>
-            <li><span>2021</span><b>3rd place, Zero Waste Project</b></li>
-            <li><span>2020</span><b>3rd &amp; popular vote, Hack the Crisis</b></li>
-            <li><span>2019</span><b>1st western region, NSC Thailand</b></li>
-          </ol>
-        </div>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="closing" id="contact">
-      <img class="closing-bg" src="images/rocket-launch.jpg" alt="" aria-hidden="true" loading="lazy">
-      <div class="closing-inner">
-        <p class="eyebrow eyebrow--light">Let's talk</p>
-        <h2>Building something<br>that needs to <em>move?</em></h2>
-        <div class="contact-pills">
-          <a class="pill glass" href="mailto:Nuch.Punnawich.P@gmail.com">Email <span>↗</span></a>
-          <a class="pill glass" href="https://www.linkedin.com/in/punnawich-pongsriassawin-620426209" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
-          <a class="pill glass" href="https://github.com/NuchPunnawichP" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-          <a class="pill glass" href="https://nuch-photo-archive.vercel.app" target="_blank" rel="noopener">Photo archive <span>↗</span></a>
-        </div>
+    <!-- ============ CTA ============ -->
+    <section class="cta" id="contact">
+      <div class="cta-stack" aria-hidden="true">
+        <img src="images/formula-track.jpg" alt=""><img src="images/rocket-launch.jpg" alt=""><img src="images/rocket-avionics.jpg" alt=""><img src="images/formula-cad.jpg" alt="">
+        <span>9+ builds and counting</span>
+      </div>
+      <h2>Let's build something<br>that <span class="grad">moves.</span></h2>
+      <div class="cta-actions">
+        <a class="btn btn--dark" href="mailto:Nuch.Punnawich.P@gmail.com">Email me</a>
+        <a class="btn btn--line" href="https://www.linkedin.com/in/punnawich-pongsriassawin-620426209" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn--line" href="https://github.com/NuchPunnawichP" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--line" href="https://nuch-photo-archive.vercel.app" target="_blank" rel="noopener">Photo archive</a>
       </div>
     </section>
   </main>
 
   <footer>
     <a class="wordmark" href="#top">nuch<span>°</span></a>
-    <p>© <span id="year">2026</span> Punnawich Pongsriassawin</p>
+    <p>© <span id="year">2026</span> Punnawich Pongsriassawin · Bangkok</p>
     <a href="#top">Back to top ↑</a>
   </footer>
 
   <dialog class="lightbox" aria-label="Photo viewer">
-    <button class="close glass" type="button" aria-label="Close photo viewer">×</button>
+    <button class="close" type="button" aria-label="Close photo viewer">×</button>
     <figure><img alt=""><figcaption></figcaption></figure>
   </dialog>
 
